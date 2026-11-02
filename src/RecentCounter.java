@@ -1,6 +1,9 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ *  https://leetcode.com/problems/number-of-recent-calls/
+ */
 public class RecentCounter {
 
     private Deque<Integer> ping = new ArrayDeque<>();

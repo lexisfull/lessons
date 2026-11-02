@@ -1,3 +1,6 @@
+/**
+ *  https://leetcode.com/problems/magical-string/
+ */
 public class MagicalString {
 
     public static void main(String... args) {

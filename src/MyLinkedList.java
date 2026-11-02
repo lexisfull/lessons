@@ -1,3 +1,7 @@
+/**
+ * https://leetcode.com/problems/design-linked-list/
+ * @param <T>
+ */
 public class MyLinkedList<T> {
 
     private int size;
