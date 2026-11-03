@@ -3,7 +3,7 @@
 
 Коллекция задач LeetCode, решённых на **Java**. Задачи сгруппированы по темам для подготовки к техническим собеседованиям.
 
-**Всего задач:** 10 · 7 Easy · 3 Medium
+**Всего задач:** 11 · 7 Easy · 4 Medium
 
 **Навигация:**
 - Название задачи → LeetCode
@@ -105,6 +105,14 @@
 ---
 
 ## Очередь и скользящее окно
+
+### [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) · Medium
+
+- **Решение:** [LongestSubstringWithoutRepeatingCharacters.java](src/LongestSubstringWithoutRepeatingCharacters.java)
+- **Алгоритм:** Sliding Window + HashSet.
+- **Задача:** найти длину самой длинной подстроки без повторяющихся символов.
+- **Подход:** храним символы текущего окна в HashSet. Если очередной символ уже есть в множестве, удаляем символы с левого края и сдвигаем `left`, пока повтор не исчезнет. Добавляем новый символ и обновляем максимальный размер окна.
+- **Сложность:** O(n) по времени в среднем, O(min(n, A)) по памяти, где A — размер алфавита. Каждый символ добавляется и удаляется не более одного раза для каждой позиции строки.
 
 ### [643. Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/) · Easy
 
