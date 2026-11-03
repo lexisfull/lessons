@@ -3,7 +3,7 @@
 
 Коллекция задач LeetCode, решённых на **Java**. Задачи сгруппированы по темам для подготовки к техническим собеседованиям.
 
-**Всего задач:** 8 · 5 Easy · 3 Medium
+**Всего задач:** 9 · 6 Easy · 3 Medium
 
 **Навигация:**
 - Название задачи → LeetCode
@@ -34,6 +34,14 @@
 ---
 
 ## Два указателя
+
+### [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) · Easy
+
+- **Решение:** [RemoveDuplicatesFromSortedArray.java](src/RemoveDuplicatesFromSortedArray.java)
+- **Алгоритм:** Two Pointers.
+- **Задача:** удалить дубликаты из отсортированного массива на месте и вернуть количество уникальных элементов.
+- **Подход:** `left` указывает на последний уникальный элемент, а `i` проходит массив. При обнаружении нового значения записываем его в `nums[left + 1]` и сдвигаем `left`. Для пустого массива возвращаем `0`, иначе — `left + 1`. Первые элементы массива до возвращённой длины содержат уникальные значения.
+- **Сложность:** O(n) по времени, O(1) по памяти.
 
 ### [167. Two Sum II — Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) · Medium
 
