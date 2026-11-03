@@ -7,7 +7,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         int maxSize = 0;
         int left = 0;
         for (int i = 0; i < s.length(); i++) {
-            while (chars.contains(s.charAt(i)) && left < i) {
+            while (chars.contains(s.charAt(i))) {
                 chars.remove(s.charAt(left));
                 left++;
             }
