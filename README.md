@@ -3,7 +3,7 @@
 
 Коллекция задач LeetCode, решённых на **Java**. Задачи сгруппированы по темам для подготовки к техническим собеседованиям.
 
-**Всего задач:** 9 · 6 Easy · 3 Medium
+**Всего задач:** 10 · 7 Easy · 3 Medium
 
 **Навигация:**
 - Название задачи → LeetCode
@@ -105,6 +105,14 @@
 ---
 
 ## Очередь и скользящее окно
+
+### [643. Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/) · Easy
+
+- **Решение:** [MaximumAverageSubarrayI.java](src/MaximumAverageSubarrayI.java)
+- **Алгоритм:** Sliding Window фиксированной длины.
+- **Задача:** найти максимальное среднее значение среди непрерывных подмассивов длины `k`.
+- **Подход:** считаем сумму первых `k` элементов и сохраняем её как текущий максимум. При сдвиге окна вычитаем уходящий элемент и прибавляем новый, обновляя максимальную сумму. Возвращаем `(double) max / k`.
+- **Сложность:** O(n) по времени, O(1) по памяти.
 
 ### [933. Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/) · Easy
 
