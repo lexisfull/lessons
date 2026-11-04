@@ -3,7 +3,7 @@
 
 Коллекция задач LeetCode, решённых на **Java**. Задачи сгруппированы по темам для подготовки к техническим собеседованиям.
 
-**Всего задач:** 11 · 7 Easy · 4 Medium
+**Всего задач:** 12 · 7 Easy · 5 Medium
 
 **Навигация:**
 - Название задачи → LeetCode
@@ -34,6 +34,14 @@
 ---
 
 ## Два указателя
+
+### [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/) · Medium
+
+- **Решение:** [ContainerWithMostWater.java](src/ContainerWithMostWater.java)
+- **Алгоритм:** Two Pointers.
+- **Задача:** найти две вертикальные линии, которые вместе с осью X образуют контейнер, вмещающий максимальное количество воды.
+- **Подход:** устанавливаем `left` в начало массива, а `reight` — в конец. Вычисляем площадь как `Math.min(height[left], height[reight]) * length` и обновляем максимум `res`. Сдвигаем указатель со стороны меньшей высоты; при равных высотах — правый. Более высокая граница не увеличит площадь при прежней меньшей высоте и сокращении ширины. После каждого шага уменьшаем `length` на один: она всегда равна `reight - left`. Возвращаем максимальную найденную площадь.
+- **Сложность:** O(n) по времени, O(1) по памяти.
 
 ### [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) · Easy
 
