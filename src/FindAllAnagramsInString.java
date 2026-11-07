@@ -5,34 +5,32 @@ import java.util.List;
 public class FindAllAnagramsInString {
 
     public List<Integer> findAnagrams(String s, String p) {
-        List<Integer> res = new ArrayList<>();
-        if (p.length() > s.length()) {
-            return res;
+        List<Integer> indexes = new ArrayList<>();
+        if (p.length() > s.length() || p.isEmpty() || s.isEmpty()) {
+            return indexes;
         }
+        int[] target = new int[26];
+        for (int i = 0; i < p.length(); i++) {
+            target[p.charAt(i) - 'a']++;
+        }
+        int[] source = new int[26];
         int left = 0;
         int reight = p.length() - 1;
-        int[] freq = new int[26];
-        for (int i = 0; i < p.length(); i++) {
-            freq[p.charAt(i) - 'a'] ++;
-        }
-        int[] freq2 = new int[26];
-        for (int i = 0; i < p.length(); i++) {
-            freq2[s.charAt(i) - 'a'] ++;
+        for (int i = left; i <= reight; i++) {
+            source[s.charAt(i) - 'a']++;
         }
         while (reight < s.length()) {
-            if (Arrays.equals(freq, freq2)) {
-                res.add(left);
+            if (Arrays.equals(target, source)) {
+                indexes.add(left);
             }
-            if (reight + 1 == s.length()) {
-                return res;
+            if (reight == s.length() - 1) {
+                break;
             }
-            freq2[s.charAt(left) - 'a']--;
-            freq2[s.charAt(reight + 1) - 'a']++;
-
+            source[s.charAt(left) - 'a']--;
+            source[s.charAt(reight + 1) - 'a']++;
             left++;
             reight++;
         }
-        return res;
+        return indexes;
     }
-
 }
