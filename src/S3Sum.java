@@ -6,6 +6,7 @@ import java.util.Set;
 
 public class S3Sum {
 
+// можно ускорить еще
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         Set<List<Integer>> res = new HashSet<>();
