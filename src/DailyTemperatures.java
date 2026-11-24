@@ -13,7 +13,6 @@ public class DailyTemperatures {
                 answer[previous] = i - previous;
             }
             stack.push(i);
-
         }
         return answer;
     }
