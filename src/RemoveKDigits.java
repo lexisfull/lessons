@@ -15,7 +15,7 @@ public class RemoveKDigits {
         stack.push(Character.getNumericValue(num.charAt(0)));
         for (int i = 1; i < num.length(); i++) {
             int current = Character.getNumericValue(num.charAt(i));
-            while (!stack.isEmpty() && stack.peek() >= current && k > 0) {
+            while (!stack.isEmpty() && stack.peek() > current && k > 0) {
                 stack.pop();
                 k--;
             }
